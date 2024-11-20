@@ -4,10 +4,10 @@
 
 #define ARRAY_LENGTH 30000
 
-char ARRAY[ARRAY_LENGTH];
-int ARRAY_POINTER = 0;
-int NUM_BRACK = 0;
-int INS_PTR = 0;
+char ARRAY[ARRAY_LENGTH];	// Array to be initialized with 0
+int ARRAY_POINTER = 0;	// the global array pointer
+int NUM_BRACK = 0;	// bracket checking
+int INS_PTR = 0;	// Instruction pointer
 
 void evaluate_bf(char *expression, int brack_index)
 {
@@ -16,7 +16,6 @@ void evaluate_bf(char *expression, int brack_index)
 
    while ((current = expression[INS_PTR]) != 0)
    {
-      // printf("%d ", INS_PTR);
       
       if (current == '>')
       {
